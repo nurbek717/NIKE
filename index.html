@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowing Navbar</title>
+  <!-- External Resources -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--============AOS============-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+  
+  <!-- ========== HEADER SECTION ========== -->
+  <header>
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="1500">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+
+      <div class="nav-center">
+        <div class="search-box">
+          <input type="text" placeholder="Search...">
+          <i class="ri-search-line"></i>
+        </div>
+
+        <div class="nav-icons">
+          <i class="ri-shopping-cart-2-fill"></i>
+          <i class="ri-user-3-fill"></i>
+          <i class="ri-menu-line" id="nav-toggle"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== MOBILE MENU (HIDDEN BY DEFAULT) ========== -->
+  <div class="nav-menu" id="nav-menu">
+    <i class="ri-close-large-line close-icon" id="nav-close"></i>
+    <ul class="nav-list">
+      <li><a href="#" class="nav-link">Home</a></li>
+      <li><a href="#" class="nav-link">About Us</a></li>
+      <li><a href="#" class="nav-link">Product</a></li>
+      <li><a href="#" class="nav-link">Contact Us</a></li>
+      <li><a href="#" class="nav-link">Shop</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== MAIN HERO SECTION ========== -->
+  
+  <section class="hero">
+    <div class="hero-text">
+      <h1 data-aos="fade-right" data-aos-duration="1500">NIKE</h1>
+      <p data-aos="fade-down" data-aos-duration="1400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, obcaecati dignissimos. Sint doloribus accusantium architecto.</p>
+      <h5 data-aos="zoom-in" data-aos-duration="1400">$199.99</h5>
+      <button class="btn" data-aos="fade-left" data-aos-duration="1500">
+        <span class="btn-text-one">Add To Cart</span>
+        <span class="btn-text-two">Great!</span>
+      </button>
+
+      <div class="social-icons" data-aos="fade-up" data-aos-duration="1500">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+        <a href="#"><i class="ri-instagram-fill"></i></a>
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+      </div>
+    </div>
+
+
+    <div class="circle-container">
+      <img src="images/img1.png" id="hero-image" alt="images" data-aos="zoom-in" data-aos-duration="2000">
+      <div class="thumbnail thumb1" onclick="changeImage('images/img1.png')"><img src="images/img1.png" data-aos="zoom-in-right" data-aos-duration="1300"></div>
+      <div class="thumbnail thumb2" onclick="changeImage('images/img2.png')"><img src="images/img2.png" data-aos="zoom-in-left" data-aos-duration="1200"></div>
+      <div class="thumbnail thumb3" onclick="changeImage('images/img3.png')"><img src="images/img3.png" data-aos="zoom-in-right" data-aos-duration="1400"></div>
+
+      <i class="ri-arrow-left-line arrow-left" data-aos="zoom-in-right" data-aos-duration="1400" onclick="prevImage()"></i>
+      <i class="ri-arrow-right-line arrow-right" data-aos="zoom-in-left" data-aos-duration="1400" onclick="nextImage()"></i>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  
+  <script src="script.js"></script>
+
+  <!--============AOS ============-->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 1
+        });
+  </script>
+
+
+</body>
+</html>
